@@ -116,7 +116,6 @@ class SwitzerlandManager():
 
         data.rename(columns={'abbreviation_canton_and_fl': 'region_code',
                              'date': 'time_report',
-                             'time': 'time_report_clock_time',
                              'ncumul_deceased' : 'deaths_total',
                              'ncumul_tested' : 'performed_tests_total',
                              'ncumul_conf' : 'positive_total',
@@ -128,7 +127,7 @@ class SwitzerlandManager():
         data['country_name'] = 'Switzerland'
         data['region_name'] = 'Canton'
 
-        id_vars = ['time_report', 'time_report_clock_time', 'country_name', 'region_code', 'source']
+        id_vars = ['time_report', 'country_name', 'region_code', 'source']
 
         value_vars = [
           'performed_tests_total', 'positive_total', 'hospitalized_total',
